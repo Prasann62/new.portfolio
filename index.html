@@ -3,19 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Arnold N Unson - Web Developer & Video Editor. React, Next.js, Premiere, DaVinci.">
-    <title>Arnold N Unson | Web Developer & Video Editor</title>
+    <meta name="description" content="Freelance Web Developer & Video Editor — I build fast, beautiful websites and cinematic brand videos that attract clients and grow your business. Available for hire.">
+    <meta name="keywords" content="freelance web developer, video editor, React, Next.js, Premiere Pro, DaVinci Resolve, GHL, portfolio">
+    <title>Arnold N Unson | Freelance Web Developer & Video Editor</title>
     <link rel="stylesheet" href="css/shared.css">
     <link rel="stylesheet" href="css/portfolio.css">
 </head>
 <body class="portfolio-body">
     <div class="noise-overlay"></div>
 
-    <!-- 1. HERO SECTION (Black Background) -->
+    <!-- STICKY NAV -->
+    <nav class="site-nav" id="site-nav">
+        <a href="#hero" class="nav-logo">ANU<span class="nav-logo-dot">.</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#skills">Work</a></li>
+            <li><a href="#motion">Video</a></li>
+            <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+        </ul>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- 1. HERO SECTION -->
     <section class="section-hero" id="hero">
         <div class="hero-container">
             <header class="hero-header-row">
-                <span class="hl-specialist">GHL Specialist</span>
+                <span class="hl-specialist">Available for Freelance</span>
                 <div class="arrow-top-right">
                     <svg viewBox="0 0 60 24" width="60" height="24" fill="none" stroke="currentColor" stroke-width="2">
                         <line x1="5" y1="12" x2="55" y2="12"></line>
@@ -25,7 +41,7 @@
             </header>
 
             <main class="hero-main-row">
-                <div class="developer-editor-label">WEB DEVELOPER & VIDEO EDITOR</div>
+                <div class="developer-editor-label">Web Developer &amp; Video Editor</div>
                 
                 <h1 class="typo-h1">
                     <span class="char char-solid">P</span>
@@ -40,119 +56,222 @@
                 </h1>
 
                 <div class="portrait-wrapper-hero">
-                    <img src="mock-assets/Gemini_Generated_Image_wz7gehwz7gehwz7g.png" alt="Arnold Portrait" class="hero-portrait">
+                    <img src="mock-assets/Gemini_Generated_Image_wz7gehwz7gehwz7g.png" alt="Arnold N Unson" class="hero-portrait">
                 </div>
 
-                <a href="#about" class="explore-work">
-                    EXPLORE WORK 
-                    <svg viewBox="0 0 40 24" width="40" height="16" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left: 0.5rem; display: inline-block; vertical-align: middle;">
-                        <line x1="2" y1="12" x2="38" y2="12"></line>
-                        <polyline points="30 5 38 12 30 19"></polyline>
-                    </svg>
-                </a>
+                <div class="hero-cta-row">
+                    <a href="#contact" class="btn-hero-primary">Start a Project</a>
+                    <a href="#skills" class="explore-work">
+                        See My Work
+                        <svg viewBox="0 0 40 24" width="40" height="16" fill="none" stroke="currentColor" stroke-width="2.5" style="margin-left: 0.5rem; display: inline-block; vertical-align: middle;">
+                            <line x1="2" y1="12" x2="38" y2="12"></line>
+                            <polyline points="30 5 38 12 30 19"></polyline>
+                        </svg>
+                    </a>
+                </div>
             </main>
 
             <footer class="hero-footer-row">
-                <span class="designer-name">Arnold N Unson</span>
-                <span class="portfolio-url">www.proskills.digital</span>
+                <div class="hero-footer-left">
+                    <span class="designer-name">Arnold N Unson</span>
+                    <span class="hero-tagline">Building digital brands that convert</span>
+                </div>
+                <div class="hero-stats-row">
+                    <div class="hero-stat">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projects Done</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                    <div class="hero-stat">
+                        <span class="stat-number">5★</span>
+                        <span class="stat-label">Client Rating</span>
+                    </div>
+                </div>
             </footer>
         </div>
     </section>
 
-    <!-- 2. WHO AM I? SECTION (White Background) -->
+    <!-- 2. ABOUT SECTION -->
     <section class="section-about" id="about">
         <div class="section-container">
             <h2 class="typo-h2-mix"><span class="char-solid">WHO</span> <span class="char-outline">AM</span> <span class="char-solid">I?</span></h2>
             
             <div class="about-grid">
-                <!-- Left: Portrait in coat -->
                 <div class="about-portrait-container reveal">
-                    <img src="mock-assets/1781268801014.png" alt="Arnold in Coat" class="about-portrait">
+                    <img src="mock-assets/1781268801014.png" alt="Arnold N Unson" class="about-portrait">
                 </div>
 
-                <!-- Right: Content -->
                 <div class="about-content reveal">
-                    <h3 class="skills-highlight">React, Next.js, Premiere, DaVinci, DeVics, cost nem-teos.</h3>
+                    <div class="about-badge">Based in the Philippines 🇵🇭</div>
+                    <h3 class="skills-highlight">I turn ideas into revenue-generating digital products.</h3>
                     <p class="about-description">
-                        WOS an-arace professional technician and developer specialized in building performant digital products and editing high-end commercial video productions. Bringing clean architecture and seamless motion designs to modern brand campaigns.
+                        I'm a freelance web developer and video editor with 5+ years of experience helping brands, startups, and entrepreneurs build a powerful online presence. I specialize in building conversion-focused websites and compelling brand videos using tools like <strong>React, Next.js, GoHighLevel</strong>, and <strong>Adobe Premiere Pro / DaVinci Resolve</strong>.
                     </p>
-                    <a href="#skills" class="btn-explore-grid">EXPLORE WORK <span>→</span></a>
+                    <p class="about-description">
+                        Whether you need a landing page that converts, a full web application, or cinematic video content — I deliver clean, professional results on time, every time.
+                    </p>
+                    <div class="about-tags-row">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">GoHighLevel</span>
+                        <span class="skill-tag">Premiere Pro</span>
+                        <span class="skill-tag">DaVinci Resolve</span>
+                        <span class="skill-tag">Figma</span>
+                    </div>
+                    <a href="#contact" class="btn-about-cta">Work With Me →</a>
                 </div>
             </div>
         </div>
-
-
     </section>
 
-    <!-- 3. CODE BLOCKS / FRONT-END ARCHITECT SECTION (Royal Blue Background) -->
+    <!-- 3. SERVICES SECTION -->
+    <section class="section-services" id="services">
+        <div class="section-container">
+            <div class="services-header reveal">
+                <h2 class="typo-h2-mix"><span class="char-solid">WHAT</span> <span class="char-outline">I DO</span></h2>
+                <p class="services-sub">End-to-end digital solutions for ambitious brands</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="16 18 22 12 16 6"></polyline>
+                            <polyline points="8 6 2 12 8 18"></polyline>
+                        </svg>
+                    </div>
+                    <span class="service-number">01</span>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-desc">Custom websites and web apps built with React, Next.js, and modern frameworks. Fast, responsive, SEO-optimized, and designed to convert visitors into clients.</p>
+                    <ul class="service-features">
+                        <li>Landing Pages &amp; Sales Funnels</li>
+                        <li>Full-Stack Web Applications</li>
+                        <li>GoHighLevel CRM Setup</li>
+                        <li>E-commerce Integrations</li>
+                    </ul>
+                    <div class="service-price">Starting at $500</div>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                        </svg>
+                    </div>
+                    <span class="service-number">02</span>
+                    <h3 class="service-title">Video Editing</h3>
+                    <p class="service-desc">Cinematic brand videos, showreels, social content, and YouTube edits that captivate your audience and elevate your brand image.</p>
+                    <ul class="service-features">
+                        <li>Brand &amp; Commercial Videos</li>
+                        <li>YouTube Long-form Edits</li>
+                        <li>Social Media Reels / Shorts</li>
+                        <li>Color Grading &amp; Sound Design</li>
+                    </ul>
+                    <div class="service-price">Starting at $200</div>
+                </div>
+
+                <div class="service-card reveal">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="3" width="20" height="14" rx="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <span class="service-number">03</span>
+                    <h3 class="service-title">Digital Strategy</h3>
+                    <p class="service-desc">Full-package digital presence setup — from branding to automation. Get your systems running so your business attracts and converts clients on autopilot.</p>
+                    <ul class="service-features">
+                        <li>Brand Identity &amp; Design</li>
+                        <li>CRM &amp; Automation Setup</li>
+                        <li>Content Strategy</li>
+                        <li>SEO &amp; Performance Audits</li>
+                    </ul>
+                    <div class="service-price">Starting at $800</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. WORK / PROJECTS SECTION -->
     <section class="section-codeblocks" id="skills">
         <div class="section-container codeblocks-grid">
             
-            <!-- Left: Rotated label "ode blocks" -->
+            <!-- Left: Rotated label -->
             <div class="vertical-title-container">
-                <span class="vertical-title">ode blocks</span>
+                <span class="vertical-title">Projects</span>
             </div>
 
             <!-- Right: Grid content -->
             <div class="codeblocks-content">
-                <h2 class="architect-title typo-h2-mix"><span class="char-solid">FRONT-END</span> <span class="char-outline">ARCHITECT.</span></h2>
+                <h2 class="architect-title typo-h2-mix"><span class="char-solid">SELECTED</span> <span class="char-outline">WORK.</span></h2>
                 
                 <div class="projects-grid">
-                    <!-- Project 1: SHADXW Concept -->
                     <div class="project-card reveal">
                         <div class="card-image-box">
-                            <img src="mock-assets/Redesign Concept for SHADXW™ T.jpeg" alt="Redesign Concept for SHADXW">
+                            <img src="mock-assets/Redesign Concept for SHADXW™ T.jpeg" alt="SHADXW Brand Redesign">
                         </div>
-                        <span class="project-tag">stack tags.</span>
+                        <div class="project-card-meta">
+                            <span class="project-tag">React · UI/UX · Branding</span>
+                            <span class="project-title-text">SHADXW™ Brand Redesign</span>
+                        </div>
                     </div>
 
-                    <!-- Project 2: Dashboard Mockup -->
                     <div class="project-card reveal">
                         <div class="card-image-box">
-                            <img src="mock-assets/1.jpeg" alt="Dashboard Redesign">
+                            <img src="mock-assets/1.jpeg" alt="SaaS Dashboard">
                         </div>
-                        <span class="project-tag">stack tags.</span>
+                        <div class="project-card-meta">
+                            <span class="project-tag">Next.js · Dashboard · SaaS</span>
+                            <span class="project-title-text">Analytics Dashboard</span>
+                        </div>
                     </div>
 
-                    <!-- Project 3: Dashboard Dark -->
                     <div class="project-card reveal">
                         <div class="card-image-box">
-                            <img src="mock-assets/download.jpeg" alt="Analytic Panel">
+                            <img src="mock-assets/download.jpeg" alt="Dark UI Panel">
                         </div>
-                        <span class="project-tag">stack tags.</span>
+                        <div class="project-card-meta">
+                            <span class="project-tag">React · API · Dark UI</span>
+                            <span class="project-title-text">Analytic Data Panel</span>
+                        </div>
                     </div>
 
-                    <!-- Project 4: Contract Logo -->
                     <div class="project-card reveal">
                         <div class="card-image-box logo-card">
-                            <img src="mock-assets/1781504633107.png" alt="Contract Logo" class="project-logo">
+                            <img src="mock-assets/1781504633107.png" alt="GHL Contract Setup" class="project-logo">
                         </div>
-                        <span class="project-tag">stack tags.</span>
+                        <div class="project-card-meta">
+                            <span class="project-tag">GoHighLevel · CRM · Automation</span>
+                            <span class="project-title-text">GHL Client Portal</span>
+                        </div>
                     </div>
                 </div>
+
+                <a href="#contact" class="btn-view-all">Start Your Project →</a>
             </div>
         </div>
-
-
     </section>
 
-    <!-- 4. MOTION SHOWCASE SECTION (Black Background, Timeline Editor) -->
+    <!-- 5. MOTION SHOWCASE SECTION -->
     <section class="section-motion" id="motion">
         <div class="section-container">
             <h2 class="motion-title typo-h2-mix"><span class="char-solid">MOTION</span> <span class="char-outline">SHOWCASE</span></h2>
+            <p class="motion-sub">Cinematic editing that stops the scroll and sells the story.</p>
 
-            <!-- Video Player block -->
             <!-- Wrapper for Video Player and Floating Mockup -->
             <div class="motion-showcase-wrapper">
                 <div class="video-player-container">
                     <video id="motion-video" src="mock-assets/876b1613d8712ed602d5162ef393d306.mp4" playsinline muted loop></video>
                     <div class="video-overlay-controls">
                         <button class="btn-play-pause" id="video-play-btn">
-                            <!-- Play SVG -->
                             <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" class="icon-play">
                                 <polygon points="5 3 19 12 5 21 5 3"></polygon>
                             </svg>
-                            <!-- Pause SVG -->
                             <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" class="icon-pause" style="display:none;">
                                 <rect x="6" y="4" width="4" height="16"></rect>
                                 <rect x="14" y="4" width="4" height="16"></rect>
@@ -162,7 +281,7 @@
                     </div>
                 </div>
 
-                <!-- Floating Mobile Phone Mockup -->
+                <!-- Floating Phone Mockup -->
                 <div class="motion-phone-mockup animate-float">
                     <div class="phone-notch-island"></div>
                     <div class="phone-reflection-gloss"></div>
@@ -170,9 +289,8 @@
                 </div>
             </div>
 
-            <!-- Styled Adobe Premiere Pro Timeline Editor Interface -->
+            <!-- Adobe Premiere Pro Style Timeline -->
             <div class="timeline-editor">
-                <!-- Timeline Header / Time Ruler -->
                 <div class="timeline-ruler">
                     <div class="ruler-ticks">
                         <span>00:00</span>
@@ -182,30 +300,25 @@
                         <span>00:04</span>
                         <span>00:05</span>
                     </div>
-                    <!-- Moving Playhead Red Line -->
                     <div class="timeline-playhead" id="playhead">
                         <div class="playhead-handle"></div>
                         <div class="playhead-line"></div>
                     </div>
                 </div>
 
-                <!-- Timeline Tracks -->
                 <div class="timeline-tracks">
-                    <!-- Video Track 1 (V1) -->
                     <div class="track-row">
                         <div class="track-info">
                             <span class="track-label">V1</span>
                             <div class="track-buttons">🔓👁️</div>
                         </div>
                         <div class="track-content">
-                            <!-- Timeline Clip -->
                             <div class="timeline-clip clip-video" style="width: 80%; left: 5%;">
                                 <span class="clip-name">Arnold_Showreel_Cut.mp4</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Audio Track 1 (A1) -->
                     <div class="track-row">
                         <div class="track-info">
                             <span class="track-label">A1</span>
@@ -218,7 +331,6 @@
                         </div>
                     </div>
 
-                    <!-- Audio Track 2 (A2) -->
                     <div class="track-row">
                         <div class="track-info">
                             <span class="track-label">A2</span>
@@ -236,86 +348,170 @@
                 </div>
             </div>
         </div>
-
-
     </section>
 
-    <!-- 5. LET'S WORK SECTION (White Background, Contact Form) -->
+    <!-- 6. TESTIMONIALS SECTION -->
+    <section class="section-testimonials" id="testimonials">
+        <div class="section-container">
+            <h2 class="typo-h2-mix testi-heading"><span class="char-solid">CLIENT</span> <span class="char-outline">LOVE</span></h2>
+            <div class="testimonials-grid">
+                <div class="testi-card reveal">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">"Arnold delivered a stunning landing page that doubled our conversion rate within two weeks. Professional, fast, and communicates perfectly."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">JR</div>
+                        <div>
+                            <span class="testi-name">James R.</span>
+                            <span class="testi-role">CEO, TechBrand Co.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card reveal">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">"The brand video Arnold edited for us went viral on Instagram — 200k views in a week. Absolutely elite editing skills and creative eye."</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">SM</div>
+                        <div>
+                            <span class="testi-name">Sofia M.</span>
+                            <span class="testi-role">Founder, Bloom Studio</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card reveal">
+                    <div class="testi-stars">★★★★★</div>
+                    <p class="testi-text">"Our GHL funnel setup was seamless. Arnold knows the platform inside out — leads are coming in automatically now. Highly recommend!"</p>
+                    <div class="testi-author">
+                        <div class="testi-avatar">KD</div>
+                        <div>
+                            <span class="testi-name">Kevin D.</span>
+                            <span class="testi-role">Coach &amp; Course Creator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. LET'S WORK / CONTACT SECTION -->
     <section class="section-work" id="contact">
         <div class="section-container">
             <div class="work-grid">
-                <!-- Left: Portrait and Socials -->
+                <!-- Left: Phone + Info -->
                 <div class="work-left reveal">
                     <h2 class="typo-h2-mix"><span class="char-solid">LET'S</span> <span class="char-outline">WORK</span></h2>
+                    <p class="work-intro">Ready to grow your business? Let's build something great together. I typically respond within 24 hours.</p>
+
                     <div class="work-phone-container">
                         <div class="work-phone-mockup animate-float">
                             <div class="phone-notch-island"></div>
                             <div class="phone-reflection-gloss"></div>
-                            <img src="mock-assets/1781505135936.png" alt="Arnold Close Up" class="phone-screen-img">
+                            <img src="mock-assets/1781505135936.png" alt="Arnold N Unson" class="phone-screen-img">
+                        </div>
+                    </div>
+
+                    <div class="contact-info-list">
+                        <div class="contact-info-item">
+                            <span class="contact-info-label">Email</span>
+                            <a href="mailto:arnold@proskills.digital" class="contact-info-value">arnold@proskills.digital</a>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-info-label">Based in</span>
+                            <span class="contact-info-value">Philippines (Remote Worldwide)</span>
+                        </div>
+                        <div class="contact-info-item">
+                            <span class="contact-info-label">Availability</span>
+                            <span class="contact-info-value available-badge">✦ Available Now</span>
                         </div>
                     </div>
 
                     <div class="social-links-row">
-                        <a href="#" class="social-icon-circle">FB</a>
-                        <a href="#" class="social-icon-circle">TW</a>
-                        <a href="#" class="social-icon-circle">LI</a>
-                        <a href="#" class="social-icon-circle">IG</a>
+                        <a href="#" class="social-icon-circle" title="LinkedIn">in</a>
+                        <a href="#" class="social-icon-circle" title="Twitter/X">𝕏</a>
+                        <a href="#" class="social-icon-circle" title="Instagram">ig</a>
+                        <a href="#" class="social-icon-circle" title="GitHub">gh</a>
                     </div>
                 </div>
 
                 <!-- Right: Contact Form -->
                 <div class="work-right reveal">
+                    <div class="form-intro-label">Send a message</div>
                     <form id="contactForm" class="contact-form-dark">
                         <div class="form-row-group">
-                            <label for="c-name">Name</label>
-                            <input type="text" id="c-name" required placeholder="Arnold Unson">
+                            <label for="c-name">Your Name</label>
+                            <input type="text" id="c-name" required placeholder="e.g. James Rodriguez">
                         </div>
 
                         <div class="form-row-group">
-                            <label for="c-format">Format</label>
+                            <label for="c-email">Email Address</label>
+                            <input type="email" id="c-email" required placeholder="james@yourbrand.com">
+                        </div>
+
+                        <div class="form-row-group">
+                            <label for="c-format">Service Needed</label>
                             <div class="custom-select-box">
                                 <select id="c-format" required>
-                                    <option value="" disabled selected>Select Format</option>
-                                    <option value="web">Web Application</option>
+                                    <option value="" disabled selected>Select a service...</option>
+                                    <option value="web">Web Development</option>
                                     <option value="video">Video Editing</option>
-                                    <option value="both">Web & Video</option>
-                                    <option value="consult">Consulting</option>
+                                    <option value="both">Web + Video Package</option>
+                                    <option value="ghl">GoHighLevel Setup</option>
+                                    <option value="consult">Strategy Consultation</option>
                                 </select>
                             </div>
                         </div>
 
                         <div class="form-row-group">
-                            <label for="c-email">Email</label>
-                            <input type="email" id="c-email" required placeholder="arnold@example.com">
+                            <label for="c-budget">Budget Range</label>
+                            <div class="custom-select-box">
+                                <select id="c-budget">
+                                    <option value="" disabled selected>Select budget...</option>
+                                    <option value="500">$500 – $1,000</option>
+                                    <option value="1000">$1,000 – $3,000</option>
+                                    <option value="3000">$3,000 – $5,000</option>
+                                    <option value="5000">$5,000+</option>
+                                </select>
+                            </div>
                         </div>
 
                         <div class="form-row-group">
-                            <label for="c-message">Message</label>
-                            <textarea id="c-message" rows="4" required placeholder="Describe your project..."></textarea>
+                            <label for="c-message">Project Details</label>
+                            <textarea id="c-message" rows="4" required placeholder="Tell me about your project, goals, and timeline..."></textarea>
                         </div>
 
-                        <!-- Button with rotating star -->
                         <button type="submit" class="btn-submit-star">
-                            <span>Submit</span>
+                            <span>Send Message</span>
                             <div class="btn-star-icon">✦</div>
                         </button>
                     </form>
 
-                    <!-- Success Message -->
                     <div class="form-success-box" id="contactSuccess">
-                        <h3>Let's collaborate! ✦</h3>
-                        <p>Thank you for reaching out. I'll get back to you shortly.</p>
+                        <div class="success-icon">✦</div>
+                        <h3>Message Sent!</h3>
+                        <p>Thanks for reaching out. I'll get back to you within 24 hours.</p>
                     </div>
                 </div>
             </div>
         </div>
-
-
     </section>
 
     <!-- FOOTER -->
     <footer class="portfolio-footer">
-        <p>© 2026 Arnold N Unson. All Rights Reserved. proskills.digital</p>
+        <div class="footer-inner">
+            <div class="footer-left">
+                <span class="footer-logo">ANU<span class="nav-logo-dot">.</span></span>
+                <span class="footer-tagline">Web Developer &amp; Video Editor</span>
+            </div>
+            <div class="footer-nav">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#skills">Work</a>
+                <a href="#motion">Video</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <p class="footer-copy">© 2026 Arnold N Unson. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script src="js/shared.js"></script>
