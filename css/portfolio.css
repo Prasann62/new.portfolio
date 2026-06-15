@@ -291,9 +291,10 @@ section {
 }
 .portrait-wrapper-hero {
     position: absolute;
-    inset: 0;                    /* top:0 right:0 bottom:0 left:0 — fills entire hero */
+    inset: 0;
     z-index: 1;
     pointer-events: none;
+    overflow: hidden;   /* clips the scaled-up image to the hero bounds */
 }
 /* Dark vignette overlay so text stays readable */
 .portrait-wrapper-hero::after {
@@ -301,16 +302,19 @@ section {
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(ellipse at center, rgba(13,13,13,0.10) 0%, rgba(13,13,13,0.65) 100%),
-        linear-gradient(to bottom, rgba(13,13,13,0.50) 0%, rgba(13,13,13,0.05) 40%, rgba(13,13,13,0.55) 100%);
+        radial-gradient(ellipse at center, rgba(13,13,13,0.05) 0%, rgba(13,13,13,0.60) 100%),
+        linear-gradient(to bottom, rgba(13,13,13,0.55) 0%, rgba(13,13,13,0.0) 45%, rgba(13,13,13,0.60) 100%);
     z-index: 2;
 }
 .hero-portrait {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 20%;   /* face appears in upper-center — like the reference */
-    filter: grayscale(1) contrast(1.15) brightness(0.7);
+    /* Zoom into the face — scale(1.6) makes the face fill center of hero */
+    transform: scale(1.6);
+    transform-origin: center 28%;   /* focus point = face/head area */
+    object-position: center 20%;
+    filter: grayscale(1) contrast(1.2) brightness(0.72);
     opacity: 1;
 }
 
