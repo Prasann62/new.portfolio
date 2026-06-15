@@ -203,8 +203,9 @@ section {
     background-color: var(--color-black);
     /* Portrait as direct background — most reliable full-cover */
     background-image: url('../mock-assets/prasanna_hero_portrait.png');
-    background-size: cover;
-    background-position: center 15%;
+    background-size: auto 90%;
+    background-position: center bottom;
+    background-repeat: no-repeat;
     height: 100vh;
     min-height: 700px;
     padding: 0;
