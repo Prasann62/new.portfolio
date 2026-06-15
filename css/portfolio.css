@@ -693,19 +693,30 @@ section {
     margin-bottom: 2.2rem;
 }
 
-.work-portrait-box {
-    overflow: hidden;
-    border: 1px solid var(--grid-line-color);
-    padding: 1.5rem;
-    background-color: var(--color-gray-light);
+.work-phone-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     margin-bottom: 2rem;
 }
 
-.work-portrait {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
+.work-phone-mockup {
+    position: relative;
+    width: 160px;
+    height: 320px;
+    background-color: #000;
+    border: 5px solid #222;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+    transform: rotate(-4deg);
+    transition: transform var(--transition-normal);
+}
+
+.work-phone-mockup:hover {
+    transform: rotate(-2deg) scale(1.03);
 }
 
 .social-links-row {
@@ -841,6 +852,11 @@ section {
 @media (max-width: 991px) {
     .motion-phone-mockup {
         display: none; /* Hide overlapping mockup on tablets for cleaner video layout */
+    }
+    
+    .work-phone-container {
+        justify-content: center;
+        margin-bottom: 2.5rem;
     }
     
     .about-grid {
