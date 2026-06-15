@@ -142,21 +142,31 @@
             <h2 class="motion-title typo-h2-mix"><span class="char-solid">MOTION</span> <span class="char-outline">SHOWCASE</span></h2>
 
             <!-- Video Player block -->
-            <div class="video-player-container">
-                <video id="motion-video" src="mock-assets/876b1613d8712ed602d5162ef393d306.mp4" playsinline muted loop></video>
-                <div class="video-overlay-controls">
-                    <button class="btn-play-pause" id="video-play-btn">
-                        <!-- Play SVG -->
-                        <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" class="icon-play">
-                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
-                        <!-- Pause SVG -->
-                        <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" class="icon-pause" style="display:none;">
-                            <rect x="6" y="4" width="4" height="16"></rect>
-                            <rect x="14" y="4" width="4" height="16"></rect>
-                        </svg>
-                    </button>
-                    <span class="video-time" id="video-timer">00:00 / 00:00</span>
+            <!-- Wrapper for Video Player and Floating Mockup -->
+            <div class="motion-showcase-wrapper">
+                <div class="video-player-container">
+                    <video id="motion-video" src="mock-assets/876b1613d8712ed602d5162ef393d306.mp4" playsinline muted loop></video>
+                    <div class="video-overlay-controls">
+                        <button class="btn-play-pause" id="video-play-btn">
+                            <!-- Play SVG -->
+                            <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" class="icon-play">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            <!-- Pause SVG -->
+                            <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" class="icon-pause" style="display:none;">
+                                <rect x="6" y="4" width="4" height="16"></rect>
+                                <rect x="14" y="4" width="4" height="16"></rect>
+                            </svg>
+                        </button>
+                        <span class="video-time" id="video-timer">00:00 / 00:00</span>
+                    </div>
+                </div>
+
+                <!-- Floating Mobile Phone Mockup -->
+                <div class="motion-phone-mockup animate-float">
+                    <div class="phone-notch-island"></div>
+                    <div class="phone-reflection-gloss"></div>
+                    <img src="mock-assets/1781504549847.png" alt="Mobile Motion View" class="phone-screen-img">
                 </div>
             </div>
 
