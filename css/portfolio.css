@@ -291,26 +291,25 @@ section {
 }
 .portrait-wrapper-hero {
     position: absolute;
-    /* Starts at 28% from top — face appears at center, body fills to bottom */
-    top: 28%;
+    /* Head appears behind the PORTFOLIO text, body fills to bottom */
+    top: 8%;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    /* Width wide enough to look natural but not stretch */
-    width: 48%;
+    /* Wide and centered — face fills center of hero */
+    width: 62%;
     z-index: 1;
     pointer-events: none;
-    overflow: hidden;
 }
 .hero-portrait {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Keep the face/head at the very top of the visible window */
-    object-position: center top;
+    /* Show the top of the image (face/head) first */
+    object-position: center 0%;
     mix-blend-mode: luminosity;
-    filter: contrast(1.2) brightness(0.8) grayscale(1);
-    opacity: 0.9;
+    filter: contrast(1.25) brightness(0.85) grayscale(1);
+    opacity: 0.92;
 }
 
 /* Hero CTA */
