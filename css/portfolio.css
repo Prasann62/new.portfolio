@@ -1,13 +1,16 @@
 /* CSS Stylesheet for Arnold N Unson's Portfolio Website */
 
 :root {
-    --color-black: #000000;
+    --color-black: #121212; /* Dark Charcoal from swatches */
     --color-white: #FFFFFF;
     --color-blue: #0A4CEC; /* Vivid Royal Blue */
     --color-gray-light: #F4F4F4;
     --color-cream: #EAE3D2;
     --color-timeline-bg: #1A1A1A;
     --color-timeline-border: #2A2A2A;
+    
+    --color-grid-light: rgba(255, 255, 255, 0.08);
+    --color-grid-dark: rgba(0, 0, 0, 0.08);
     
     --font-heading: 'Oswald', sans-serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -19,6 +22,21 @@ body.portfolio-body {
     color: var(--color-white);
     font-family: var(--font-body);
     overflow-x: hidden;
+    position: relative;
+}
+
+/* SVG FractalNoise Grain Overlay */
+.noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    content: "";
+    opacity: 0.045;
+    z-index: 9999;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
 /* Common Section Styles */
@@ -29,6 +47,13 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom: 1px solid var(--grid-line-color);
+    --grid-line-color: var(--color-grid-light);
+}
+
+/* Theme overrides for grid line colors */
+.section-about, .section-work {
+    --grid-line-color: var(--color-grid-dark);
 }
 
 .section-container {
@@ -37,6 +62,24 @@ section {
     margin: 0 auto;
     position: relative;
     z-index: 5;
+}
+
+/* Grid helper utilities */
+.grid-line-x {
+    border-top: 1px solid var(--grid-line-color);
+    border-bottom: 1px solid var(--grid-line-color);
+}
+
+.grid-border-left {
+    border-left: 1px solid var(--grid-line-color);
+}
+
+.grid-border-right {
+    border-right: 1px solid var(--grid-line-color);
+}
+
+.grid-border-bottom {
+    border-bottom: 1px solid var(--grid-line-color);
 }
 
 /* 1. HERO SECTION (Black Background) */
@@ -200,26 +243,37 @@ section {
     color: var(--color-black);
 }
 
-.title-about {
+.typo-h2-mix {
     font-family: var(--font-heading);
-    font-size: clamp(3rem, 8vw, 6rem);
+    font-size: clamp(3rem, 7vw, 5.5rem);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: -0.02em;
-    margin-bottom: 3rem;
+    line-height: 1;
+    margin-bottom: 3.5rem;
+}
+
+.typo-h2-mix .char-solid {
+    color: inherit;
+}
+
+.typo-h2-mix .char-outline {
+    color: transparent;
+    -webkit-text-stroke: 1.5px currentColor;
 }
 
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    gap: 4.5rem;
+    gap: 4rem;
     align-items: center;
 }
 
 .about-portrait-container {
-    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    border: 1px solid var(--grid-line-color);
+    padding: 1.5rem;
+    background-color: var(--color-gray-light);
 }
 
 .about-portrait {
@@ -284,6 +338,8 @@ section {
     justify-content: center;
     align-items: flex-start;
     padding-top: 2rem;
+    border-right: 1px solid var(--grid-line-color);
+    padding-right: 2rem;
 }
 
 .vertical-title {
@@ -300,11 +356,6 @@ section {
 }
 
 .architect-title {
-    font-family: var(--font-heading);
-    font-size: clamp(2.5rem, 6vw, 4.5rem);
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: -0.01em;
     margin-bottom: 3rem;
 }
 
@@ -317,18 +368,20 @@ section {
 .project-card {
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1rem;
+    border: 1px solid var(--grid-line-color);
+    padding: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
 .card-image-box {
-    border-radius: 6px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     background-color: #0c3dc4;
     aspect-ratio: 1.78;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card-image-box img {
@@ -358,6 +411,7 @@ section {
     font-family: monospace;
     font-size: 0.85rem;
     opacity: 0.8;
+    text-transform: uppercase;
 }
 
 /* 4. MOTION SHOWCASE SECTION (Black Background) */
@@ -366,24 +420,18 @@ section {
 }
 
 .motion-title {
-    font-family: var(--font-serif);
-    font-size: clamp(2.5rem, 7vw, 4.8rem);
-    font-weight: 400;
-    letter-spacing: -0.01em;
-    margin-bottom: 2.5rem;
-    color: var(--color-cream);
+    margin-bottom: 3.5rem;
 }
 
 .video-player-container {
     width: 100%;
     max-width: 800px;
     margin: 0 auto 3rem auto;
-    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 20px 45px rgba(0,0,0,0.6);
     position: relative;
     aspect-ratio: 1.78;
     background-color: #111;
+    border: 1px solid var(--grid-line-color);
 }
 
 .video-player-container video {
@@ -432,10 +480,8 @@ section {
 /* Premiere Pro Timeline Interface Styling */
 .timeline-editor {
     background-color: var(--color-timeline-bg);
-    border: 1px solid var(--color-timeline-border);
-    border-radius: 6px;
+    border: 1px solid var(--grid-line-color);
     padding: 1.5rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 /* Time ruler ticks */
@@ -571,25 +617,24 @@ section {
 .work-grid {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
-    gap: 4.5rem;
+    gap: 4rem;
     align-items: center;
 }
 
+.work-left {
+    border-right: 1px solid var(--grid-line-color);
+    padding-right: 4rem;
+}
+
 .title-work-outlined {
-    font-family: var(--font-heading);
-    font-size: clamp(3rem, 8vw, 6.2rem);
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: -0.02em;
-    color: transparent;
-    -webkit-text-stroke: 1.5px var(--color-black);
     margin-bottom: 2.2rem;
 }
 
 .work-portrait-box {
-    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    border: 1px solid var(--grid-line-color);
+    padding: 1.5rem;
+    background-color: var(--color-gray-light);
     margin-bottom: 2rem;
 }
 
@@ -625,14 +670,13 @@ section {
 
 /* Contact form dark styling */
 .contact-form-dark {
-    background-color: #121212;
+    background-color: #1a1a1a;
     padding: 2.5rem;
-    border-radius: 8px;
     color: var(--color-white);
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    border: 1px solid var(--grid-line-color);
 }
 
 .form-row-group {
@@ -652,9 +696,8 @@ section {
 .form-row-group input,
 .form-row-group textarea,
 .form-row-group select {
-    background-color: #1E1E1E;
-    border: 1px solid #2A2A2A;
-    border-radius: 4px;
+    background-color: #121212;
+    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0.8rem 1rem;
     color: var(--color-white);
     font-size: 0.95rem;
@@ -664,7 +707,7 @@ section {
 .form-row-group input:focus,
 .form-row-group textarea:focus,
 .form-row-group select:focus {
-    border-color: var(--color-cream);
+    border-color: var(--color-white);
     outline: none;
 }
 
@@ -707,10 +750,10 @@ section {
 .form-success-box {
     display: none;
     text-align: center;
-    background-color: #121212;
+    background-color: #1a1a1a;
     color: var(--color-white);
     padding: 3rem 2rem;
-    border-radius: 8px;
+    border: 1px solid var(--grid-line-color);
 }
 
 .form-success-box h3 {
