@@ -54,26 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- 2. Parallax Scroll effect for Floating Mobile Mockups ---
-    const devices = document.querySelectorAll('.floating-device');
-    
-    window.addEventListener('scroll', () => {
-        const scrollTop = window.scrollY;
-        
-        devices.forEach(device => {
-            // Determine vertical offset multiplier based on class
-            let factor = 0.05;
-            if (device.classList.contains('device-hero')) factor = 0.08;
-            if (device.classList.contains('device-about')) factor = -0.06;
-            if (device.classList.contains('device-codeblocks')) factor = 0.07;
-            if (device.classList.contains('device-motion')) factor = -0.05;
-            if (device.classList.contains('device-work')) factor = 0.09;
-            
-            // Translate mockup vertically relative to scroll
-            const offset = scrollTop * factor;
-            device.style.transform = `translateY(${offset}px)`;
-        });
-    });
+
 
     // --- 3. Contact Form Submission (localStorage) ---
     const contactForm = document.getElementById('contactForm');
