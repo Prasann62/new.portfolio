@@ -93,7 +93,8 @@ section {
 }
 .typo-h2-mix .char-solid { color: inherit; }
 .typo-h2-mix .char-outline {
-    color: transparent;
+    color: inherit;
+    -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 1.5px currentColor;
 }
 
