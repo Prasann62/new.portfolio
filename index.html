@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Arnold N Unson - Web Developer & Video Editor. React, Next.js, Premiere, DaVinci.">
+    <title>Arnold N Unson | Web Developer & Video Editor</title>
+    <link rel="stylesheet" href="css/shared.css">
+    <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body class="portfolio-body">
+
+    <!-- 1. HERO SECTION (Black Background) -->
+    <section class="section-hero" id="hero">
+        <div class="header-overlay">
+            <span class="hl-specialist">GHL Specialist</span>
+            <span class="developer-editor-label">WEB DEVELOPER & VIDEO EDITOR</span>
+            <div class="arrow-top-right">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </div>
+        </div>
+
+        <div class="hero-main">
+            <!-- Large Typography background overlay -->
+            <div class="portfolio-typo-bg">
+                <span class="typo-h1">PORTFOLIO</span>
+            </div>
+        </div>
+
+        <div class="hero-footer">
+            <div class="footer-left">
+                <span class="designer-name">Arnold N Unson</span>
+                <a href="#about" class="explore-work">EXPLORE WORK <span>→</span></a>
+            </div>
+            <div class="footer-right">
+                <span class="portfolio-url">www.proskills.digital</span>
+            </div>
+        </div>
+
+        <!-- Floating Mobile Device Frame -->
+        <div class="floating-device device-hero">
+            <div class="device-notch"></div>
+            <div class="device-screen">
+                <img src="mock-assets/1779298924198.png" alt="Mobile Hero View">
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. WHO AM I? SECTION (White Background) -->
+    <section class="section-about" id="about">
+        <div class="section-container">
+            <h2 class="title-about">WHO AM I?</h2>
+            
+            <div class="about-grid">
+                <!-- Left: Portrait in coat -->
+                <div class="about-portrait-container reveal">
+                    <img src="mock-assets/1781268801014.png" alt="Arnold in Coat" class="about-portrait">
+                </div>
+
+                <!-- Right: Content -->
+                <div class="about-content reveal">
+                    <h3 class="skills-highlight">React, Next.js, Premiere, DaVinci, DeVics, cost nem-teos.</h3>
+                    <p class="about-description">
+                        WOS an-arace professional technician and developer specialized in building performant digital products and editing high-end commercial video productions. Bringing clean architecture and seamless motion designs to modern brand campaigns.
+                    </p>
+                    <a href="#skills" class="btn-explore-grid">EXPLORE WORK <span>→</span></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Mobile Device Frame -->
+        <div class="floating-device device-about">
+            <div class="device-notch"></div>
+            <div class="device-screen">
+                <img src="mock-assets/1781504301539.png" alt="Mobile About View">
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. CODE BLOCKS / FRONT-END ARCHITECT SECTION (Royal Blue Background) -->
+    <section class="section-codeblocks" id="skills">
+        <div class="section-container codeblocks-grid">
+            
+            <!-- Left: Rotated label "ode blocks" -->
+            <div class="vertical-title-container">
+                <span class="vertical-title">ode blocks</span>
+            </div>
+
+            <!-- Right: Grid content -->
+            <div class="codeblocks-content">
+                <h2 class="architect-title">FRONT-END ARCHITECT.</h2>
+                
+                <div class="projects-grid">
+                    <!-- Project 1: SHADXW Concept -->
+                    <div class="project-card reveal">
+                        <div class="card-image-box">
+                            <img src="mock-assets/Redesign Concept for SHADXW™ T.jpeg" alt="Redesign Concept for SHADXW">
+                        </div>
+                        <span class="project-tag">stack tags.</span>
+                    </div>
+
+                    <!-- Project 2: Dashboard Mockup -->
+                    <div class="project-card reveal">
+                        <div class="card-image-box">
+                            <img src="mock-assets/1.jpeg" alt="Dashboard Redesign">
+                        </div>
+                        <span class="project-tag">stack tags.</span>
+                    </div>
+
+                    <!-- Project 3: Dashboard Dark -->
+                    <div class="project-card reveal">
+                        <div class="card-image-box">
+                            <img src="mock-assets/download.jpeg" alt="Analytic Panel">
+                        </div>
+                        <span class="project-tag">stack tags.</span>
+                    </div>
+
+                    <!-- Project 4: Contract Logo -->
+                    <div class="project-card reveal">
+                        <div class="card-image-box logo-card">
+                            <img src="mock-assets/1781504633107.png" alt="Contract Logo" class="project-logo">
+                        </div>
+                        <span class="project-tag">stack tags.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Mobile Device Frame -->
+        <div class="floating-device device-codeblocks">
+            <div class="device-notch"></div>
+            <div class="device-screen">
+                <img src="mock-assets/1781504450641.png" alt="Mobile Code View">
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. MOTION SHOWCASE SECTION (Black Background, Timeline Editor) -->
+    <section class="section-motion" id="motion">
+        <div class="section-container">
+            <h2 class="motion-title">MOTION SHOWCASE</h2>
+
+            <!-- Video Player block -->
+            <div class="video-player-container">
+                <video id="motion-video" src="mock-assets/876b1613d8712ed602d5162ef393d306.mp4" playsinline muted loop></video>
+                <div class="video-overlay-controls">
+                    <button class="btn-play-pause" id="video-play-btn">
+                        <!-- Play SVG -->
+                        <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" class="icon-play">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        <!-- Pause SVG -->
+                        <svg viewBox="0 0 24 24" width="30" height="30" fill="currentColor" class="icon-pause" style="display:none;">
+                            <rect x="6" y="4" width="4" height="16"></rect>
+                            <rect x="14" y="4" width="4" height="16"></rect>
+                        </svg>
+                    </button>
+                    <span class="video-time" id="video-timer">00:00 / 00:00</span>
+                </div>
+            </div>
+
+            <!-- Styled Adobe Premiere Pro Timeline Editor Interface -->
+            <div class="timeline-editor">
+                <!-- Timeline Header / Time Ruler -->
+                <div class="timeline-ruler">
+                    <div class="ruler-ticks">
+                        <span>00:00</span>
+                        <span>00:01</span>
+                        <span>00:02</span>
+                        <span>00:03</span>
+                        <span>00:04</span>
+                        <span>00:05</span>
+                    </div>
+                    <!-- Moving Playhead Red Line -->
+                    <div class="timeline-playhead" id="playhead">
+                        <div class="playhead-handle"></div>
+                        <div class="playhead-line"></div>
+                    </div>
+                </div>
+
+                <!-- Timeline Tracks -->
+                <div class="timeline-tracks">
+                    <!-- Video Track 1 (V1) -->
+                    <div class="track-row">
+                        <div class="track-info">
+                            <span class="track-label">V1</span>
+                            <div class="track-buttons">🔓👁️</div>
+                        </div>
+                        <div class="track-content">
+                            <!-- Timeline Clip -->
+                            <div class="timeline-clip clip-video" style="width: 80%; left: 5%;">
+                                <span class="clip-name">Arnold_Showreel_Cut.mp4</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Audio Track 1 (A1) -->
+                    <div class="track-row">
+                        <div class="track-info">
+                            <span class="track-label">A1</span>
+                            <div class="track-buttons">🔓🔇🔊</div>
+                        </div>
+                        <div class="track-content">
+                            <div class="timeline-clip clip-audio" style="width: 80%; left: 5%;">
+                                <span class="clip-name">Cinematic_Beat.wav</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Audio Track 2 (A2) -->
+                    <div class="track-row">
+                        <div class="track-info">
+                            <span class="track-label">A2</span>
+                            <div class="track-buttons">🔓🔇🔊</div>
+                        </div>
+                        <div class="track-content">
+                            <div class="timeline-clip clip-audio-fx" style="width: 40%; left: 15%;">
+                                <span class="clip-name">Swoosh_Transition.wav</span>
+                            </div>
+                            <div class="timeline-clip clip-audio-fx" style="width: 30%; left: 60%;">
+                                <span class="clip-name">Whoosh_SFX.wav</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Mobile Device Frame -->
+        <div class="floating-device device-motion">
+            <div class="device-notch"></div>
+            <div class="device-screen">
+                <img src="mock-assets/1781504549847.png" alt="Mobile Motion View">
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. LET'S WORK SECTION (White Background, Contact Form) -->
+    <section class="section-work" id="contact">
+        <div class="section-container">
+            <div class="work-grid">
+                <!-- Left: Portrait and Socials -->
+                <div class="work-left reveal">
+                    <h2 class="title-work-outlined">LET'S WORK</h2>
+                    
+                    <div class="work-portrait-box">
+                        <img src="mock-assets/1781505135936.png" alt="Arnold Close Up" class="work-portrait">
+                    </div>
+
+                    <div class="social-links-row">
+                        <a href="#" class="social-icon-circle">FB</a>
+                        <a href="#" class="social-icon-circle">TW</a>
+                        <a href="#" class="social-icon-circle">LI</a>
+                        <a href="#" class="social-icon-circle">IG</a>
+                    </div>
+                </div>
+
+                <!-- Right: Contact Form -->
+                <div class="work-right reveal">
+                    <form id="contactForm" class="contact-form-dark">
+                        <div class="form-row-group">
+                            <label for="c-name">Name</label>
+                            <input type="text" id="c-name" required placeholder="Arnold Unson">
+                        </div>
+
+                        <div class="form-row-group">
+                            <label for="c-format">Format</label>
+                            <div class="custom-select-box">
+                                <select id="c-format" required>
+                                    <option value="" disabled selected>Select Format</option>
+                                    <option value="web">Web Application</option>
+                                    <option value="video">Video Editing</option>
+                                    <option value="both">Web & Video</option>
+                                    <option value="consult">Consulting</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row-group">
+                            <label for="c-email">Email</label>
+                            <input type="email" id="c-email" required placeholder="arnold@example.com">
+                        </div>
+
+                        <div class="form-row-group">
+                            <label for="c-message">Message</label>
+                            <textarea id="c-message" rows="4" required placeholder="Describe your project..."></textarea>
+                        </div>
+
+                        <!-- Button with rotating star -->
+                        <button type="submit" class="btn-submit-star">
+                            <span>Submit</span>
+                            <div class="btn-star-icon">✦</div>
+                        </button>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="form-success-box" id="contactSuccess">
+                        <h3>Let's collaborate! ✦</h3>
+                        <p>Thank you for reaching out. I'll get back to you shortly.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Mobile Device Frame -->
+        <div class="floating-device device-work">
+            <div class="device-notch"></div>
+            <div class="device-screen">
+                <img src="mock-assets/1781505135936.png" alt="Mobile Work View">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="portfolio-footer">
+        <p>© 2026 Arnold N Unson. All Rights Reserved. proskills.digital</p>
+    </footer>
+
+    <script src="js/shared.js"></script>
+    <script src="js/portfolio.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "creative-portfolios",
+  "version": "1.0.0",
+  "description": "Premium multi-designer portfolio hub featuring Han Nguyen and Shivam Kaushal.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server ./ -p 3000",
+    "start": "npx http-server ./ -p 3000"
+  },
+  "keywords": [
+    "portfolio",
+    "responsive",
+    "interactive",
+    "css-animations",
+    "parallax"
+  ],
+  "author": "Creative Designers",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

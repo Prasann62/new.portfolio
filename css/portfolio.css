@@ -1,0 +1,824 @@
+/* CSS Stylesheet for Arnold N Unson's Portfolio Website */
+
+:root {
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-blue: #0A4CEC; /* Vivid Royal Blue */
+    --color-gray-light: #F4F4F4;
+    --color-cream: #EAE3D2;
+    --color-timeline-bg: #1A1A1A;
+    --color-timeline-border: #2A2A2A;
+    
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-serif: 'DM Serif Display', serif;
+}
+
+body.portfolio-body {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+}
+
+/* Common Section Styles */
+section {
+    position: relative;
+    padding: 6rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+
+/* 1. HERO SECTION (Black Background) */
+.section-hero {
+    background-color: var(--color-black);
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.header-overlay {
+    padding: 2.5rem 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 10;
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.hl-specialist {
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.developer-editor-label {
+    font-weight: 500;
+}
+
+.arrow-top-right {
+    opacity: 0.7;
+}
+
+.hero-main {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.portfolio-typo-bg {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    user-select: none;
+    pointer-events: none;
+}
+
+.typo-h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(5rem, 15vw, 12rem);
+    font-weight: 900;
+    color: var(--color-white);
+    letter-spacing: -0.04em;
+    line-height: 0.85;
+}
+
+.portrait-wrapper-hero {
+    position: relative;
+    height: 95%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 3;
+}
+
+.hero-portrait {
+    height: 90vh;
+    max-height: 700px;
+    object-fit: contain;
+    mix-blend-mode: normal;
+}
+
+.hero-footer {
+    padding: 2.5rem 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    z-index: 10;
+    font-size: 0.82rem;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.designer-name {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.explore-work {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color var(--transition-fast);
+}
+
+.explore-work:hover {
+    color: var(--color-cream);
+}
+
+.portfolio-url {
+    font-weight: 600;
+    opacity: 0.7;
+    letter-spacing: 0.05em;
+}
+
+/* 2. ABOUT ME SECTION (White Background) */
+.section-about {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.title-about {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: 3rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4.5rem;
+    align-items: center;
+}
+
+.about-portrait-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.about-portrait {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.skills-highlight {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+.about-description {
+    font-size: 1.05rem;
+    line-height: 1.65;
+    opacity: 0.8;
+}
+
+.btn-explore-grid {
+    align-self: flex-start;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--color-black);
+    padding-bottom: 0.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    transition: transform var(--transition-fast);
+}
+
+.btn-explore-grid:hover {
+    transform: translateX(5px);
+}
+
+/* 3. FRONT-END ARCHITECT SECTION (Royal Blue Background) */
+.section-codeblocks {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+.codeblocks-grid {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 3rem;
+}
+
+/* Rotated vertical text "ode blocks" */
+.vertical-title-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 2rem;
+}
+
+.vertical-title {
+    font-family: var(--font-heading);
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: left top;
+    white-space: nowrap;
+    opacity: 0.85;
+    letter-spacing: -0.02em;
+    display: inline-block;
+}
+
+.architect-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.card-image-box {
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    background-color: #0c3dc4;
+    aspect-ratio: 1.78;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.card-image-box:hover img {
+    transform: scale(1.03);
+}
+
+/* Special logo card centering */
+.card-image-box.logo-card {
+    aspect-ratio: 1.78;
+    background-color: #f7f7f7;
+}
+
+.project-logo {
+    width: 70px !important;
+    height: 70px !important;
+    object-fit: contain !important;
+}
+
+.project-tag {
+    font-family: monospace;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* 4. MOTION SHOWCASE SECTION (Black Background) */
+.section-motion {
+    background-color: var(--color-black);
+}
+
+.motion-title {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 7vw, 4.8rem);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin-bottom: 2.5rem;
+    color: var(--color-cream);
+}
+
+.video-player-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.6);
+    position: relative;
+    aspect-ratio: 1.78;
+    background-color: #111;
+}
+
+.video-player-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+    z-index: 10;
+}
+
+.video-player-container:hover .video-overlay-controls {
+    opacity: 1;
+}
+
+.btn-play-pause {
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition-fast);
+}
+
+.btn-play-pause:hover {
+    transform: scale(1.1);
+}
+
+.video-time {
+    font-size: 0.85rem;
+    font-family: monospace;
+    opacity: 0.8;
+}
+
+/* Premiere Pro Timeline Interface Styling */
+.timeline-editor {
+    background-color: var(--color-timeline-bg);
+    border: 1px solid var(--color-timeline-border);
+    border-radius: 6px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Time ruler ticks */
+.timeline-ruler {
+    position: relative;
+    border-bottom: 1px solid var(--color-timeline-border);
+    padding-bottom: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.ruler-ticks {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5%;
+    font-size: 0.75rem;
+    font-family: monospace;
+    color: #666;
+}
+
+/* Timeline moving playhead line */
+.timeline-playhead {
+    position: absolute;
+    top: -5px;
+    left: 5%; /* Bound to video current time in JS */
+    height: calc(100% + 140px);
+    width: 2px;
+    background-color: #E63946; /* Premiere Red Playhead */
+    z-index: 15;
+    pointer-events: none;
+    transition: left 0.1s linear;
+}
+
+.playhead-handle {
+    width: 12px;
+    height: 12px;
+    background-color: #E63946;
+    border-radius: 50%;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.playhead-line {
+    width: 2px;
+    height: 100%;
+    background-color: #E63946;
+}
+
+.timeline-tracks {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.track-row {
+    display: flex;
+    height: 40px;
+    align-items: center;
+}
+
+.track-info {
+    width: 70px;
+    background-color: #242424;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0.8rem;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.track-label {
+    opacity: 0.8;
+}
+
+.track-buttons {
+    font-size: 0.68rem;
+    opacity: 0.5;
+    letter-spacing: 2px;
+}
+
+.track-content {
+    flex: 1;
+    background-color: #121212;
+    height: 100%;
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* Timeline clips styling */
+.timeline-clip {
+    position: absolute;
+    height: calc(100% - 8px);
+    top: 4px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding-left: 0.8rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* Premiere clip colors */
+.clip-video {
+    background-color: #5B92E5; /* Light Cyan-Blue V1 */
+    color: #08214C;
+}
+
+.clip-audio {
+    background-color: #4A9C80; /* Teal/Green A1 */
+    color: #07261B;
+}
+
+.clip-audio-fx {
+    background-color: #3B7FB9; /* Medium Blue SFX */
+    color: #ffffff;
+}
+
+/* 5. LET'S WORK SECTION (White Background, Contact Form) */
+.section-work {
+    background-color: var(--color-white);
+    color: var(--color-black);
+}
+
+.work-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 4.5rem;
+    align-items: center;
+}
+
+.title-work-outlined {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 8vw, 6.2rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--color-black);
+    margin-bottom: 2.2rem;
+}
+
+.work-portrait-box {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    margin-bottom: 2rem;
+}
+
+.work-portrait {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.social-links-row {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.social-icon-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.social-icon-circle:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+/* Contact form dark styling */
+.contact-form-dark {
+    background-color: #121212;
+    padding: 2.5rem;
+    border-radius: 8px;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.form-row-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-row-group label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+}
+
+.form-row-group input,
+.form-row-group textarea,
+.form-row-group select {
+    background-color: #1E1E1E;
+    border: 1px solid #2A2A2A;
+    border-radius: 4px;
+    padding: 0.8rem 1rem;
+    color: var(--color-white);
+    font-size: 0.95rem;
+    transition: border-color var(--transition-fast);
+}
+
+.form-row-group input:focus,
+.form-row-group textarea:focus,
+.form-row-group select:focus {
+    border-color: var(--color-cream);
+    outline: none;
+}
+
+/* Custom select styling */
+.custom-select-box select {
+    width: 100%;
+    cursor: pointer;
+}
+
+/* Capsule Submit Button with star */
+.btn-submit-star {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    padding: 0.9rem 2.2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    align-self: flex-start;
+    margin-top: 0.5rem;
+    transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.btn-submit-star:hover {
+    background-color: var(--color-cream);
+    transform: translateY(-2px);
+}
+
+.btn-star-icon {
+    font-size: 1.1rem;
+    line-height: 1;
+    animation: spin 6s linear infinite;
+    display: inline-block;
+}
+
+.form-success-box {
+    display: none;
+    text-align: center;
+    background-color: #121212;
+    color: var(--color-white);
+    padding: 3rem 2rem;
+    border-radius: 8px;
+}
+
+.form-success-box h3 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    color: var(--color-cream);
+    margin-bottom: 0.8rem;
+}
+
+/* 6. FOOTER */
+.portfolio-footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    padding: 3rem 2rem;
+    font-size: 0.82rem;
+    opacity: 0.6;
+    border-top: 1px solid var(--color-timeline-border);
+}
+
+/* 7. FLOATING DEVICE MOCKUP FRAMES (Parallax Smartphone Mockups) */
+.floating-device {
+    position: absolute;
+    width: 190px;
+    height: 380px;
+    background-color: #111;
+    border: 7px solid #222;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    z-index: 8;
+    pointer-events: none;
+    display: block;
+}
+
+.device-notch {
+    width: 80px;
+    height: 14px;
+    background-color: #222;
+    border-radius: 0 0 10px 10px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.device-screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.device-screen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Coordinate Pinned Positions for Floating Smartphone frames */
+.device-hero {
+    right: 8%;
+    top: 30%;
+    transform: translateY(0);
+}
+
+.device-about {
+    left: 8%;
+    top: 75%;
+}
+
+.device-codeblocks {
+    right: 8%;
+    top: 40%;
+}
+
+.device-motion {
+    left: 8%;
+    top: 60%;
+}
+
+.device-work {
+    right: 8%;
+    top: 50%;
+}
+
+/* RESPONSIVENESS AND TABLET/MOBILE HIDES */
+@media (max-width: 991px) {
+    .floating-device {
+        display: none; /* Hide device mockups on small screens for neat content flow */
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .codeblocks-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .vertical-title {
+        transform: none;
+        writing-mode: horizontal-tb;
+        font-size: 3rem;
+    }
+    
+    .vertical-title-container {
+        padding-top: 0;
+        justify-content: flex-start;
+    }
+    
+    .work-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .header-overlay {
+        padding: 1.5rem;
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+    
+    .hero-footer {
+        padding: 1.5rem;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .footer-left {
+        align-items: center;
+    }
+}
