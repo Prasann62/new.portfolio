@@ -478,10 +478,16 @@
                             <textarea id="c-message" rows="4" required placeholder="Tell me about your project, goals, and timeline..."></textarea>
                         </div>
 
-                        <button type="submit" class="btn-submit-star">
-                            <span>Send Message</span>
-                            <div class="btn-star-icon">✦</div>
-                        </button>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <button type="button" class="btn-submit-star" onclick="sendViaWhatsApp()" style="flex: 1; min-width: max-content;">
+                                <span>WhatsApp</span>
+                                <div class="btn-star-icon">💬</div>
+                            </button>
+                            <button type="button" class="btn-submit-star" onclick="sendViaEmail()" style="flex: 1; min-width: max-content; background: rgba(255,255,255,0.1); color: #fff;">
+                                <span>Email</span>
+                                <div class="btn-star-icon">✉️</div>
+                            </button>
+                        </div>
                     </form>
 
                     <div class="form-success-box" id="contactSuccess">
@@ -514,5 +520,42 @@
 
     <script src="js/shared.js"></script>
     <script src="js/portfolio.js"></script>
+
+    <script>
+        function sendViaWhatsApp() {
+            const name = document.getElementById("c-name").value.trim();
+            const email = document.getElementById("c-email").value.trim();
+            const service = document.getElementById("c-format").value;
+            const budget = document.getElementById("c-budget").value;
+            const message = document.getElementById("c-message").value.trim();
+
+            if (!name || !email || !message) {
+                alert("Please fill out your Name, Email, and Project Details before sending.");
+                return;
+            }
+
+            const text = `Hi Prasanna,%0A%0AMy name is ${name}.%0AEmail: ${email}%0AService Needed: ${service || 'Not specified'}%0ABudget: ${budget || 'Not specified'}%0A%0AMessage:%0A${message}`;
+            const link = `https://wa.me/918608144068?text=${text}`;
+            window.open(link, "_blank");
+        }
+
+        function sendViaEmail() {
+            const name = document.getElementById("c-name").value.trim();
+            const email = document.getElementById("c-email").value.trim();
+            const service = document.getElementById("c-format").value;
+            const budget = document.getElementById("c-budget").value;
+            const message = document.getElementById("c-message").value.trim();
+
+            if (!name || !email || !message) {
+                alert("Please fill out your Name, Email, and Project Details before sending.");
+                return;
+            }
+
+            const subject = encodeURIComponent(`New Portfolio Inquiry from ${name}`);
+            const body = encodeURIComponent(`Hi Prasanna,\n\nMy name is ${name}.\nEmail: ${email}\nService Needed: ${service || 'Not specified'}\nBudget: ${budget || 'Not specified'}\n\nMessage:\n${message}`);
+            const link = `mailto:prasannnakumar95657@gmail.com?subject=${subject}&body=${body}`;
+            window.open(link, "_blank");
+        }
+    </script>
 </body>
 </html>
